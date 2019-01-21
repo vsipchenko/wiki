@@ -25,7 +25,7 @@ class PageVersionUtilsTestCase(WikiBaseTestCase):
 
     def test_create_new_page(self):
         """
-        Test create_new_page util from page app.
+        Test create_new_page util.
         """
         pages_count_before = Page.objects.count()
         versions_count_before = Version.objects.count()
@@ -44,7 +44,7 @@ class PageVersionUtilsTestCase(WikiBaseTestCase):
 
     def test_create_active_version(self):
         """
-        Test create_active_version util from page app.
+        Test create_active_version util.
         """
         page = Page.objects.last()
         versions_count_before = Version.objects.filter(page_id=page.id).count()
@@ -70,7 +70,7 @@ class PageVersionUtilsTestCase(WikiBaseTestCase):
 
     def test_activate_version(self):
         """
-        Test activate_version util from page app.
+        Test activate_version util.
         """
         page = Page.objects.last()
         versions_count_before = Version.objects.filter(page_id=page.id).count()
